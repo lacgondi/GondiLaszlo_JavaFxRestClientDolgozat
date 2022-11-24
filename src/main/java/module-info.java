@@ -4,6 +4,6 @@ module com.example.gondilaszlo_javafxrestclient {
     requires com.google.gson;
 
 
-    opens com.example.gondilaszlo_javafxrestclient to javafx.fxml, com.google.gsgit reset --hard HEAD~1on;
+    opens com.example.gondilaszlo_javafxrestclient to javafx.fxml, com.google.gson;
     exports com.example.gondilaszlo_javafxrestclient;
 }
