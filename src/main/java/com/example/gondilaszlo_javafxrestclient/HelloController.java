@@ -22,8 +22,6 @@ public class HelloController {
     @FXML
     private TableView<Bus> busTable;
     @FXML
-    private TableColumn<Bus, Integer> idCol;
-    @FXML
     private TableColumn<Bus, String> busCol;
     @FXML
     private TableColumn<Bus, Integer> delayCol;
@@ -32,10 +30,9 @@ public class HelloController {
 
     @FXML
     private void initialize() {
-        idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
-        busCol.setCellValueFactory(new PropertyValueFactory<>("email"));
-        delayCol.setCellValueFactory(new PropertyValueFactory<>("age"));
-        destCol.setCellValueFactory(new PropertyValueFactory<>("age"));
+        busCol.setCellValueFactory(new PropertyValueFactory<>("busID"));
+        delayCol.setCellValueFactory(new PropertyValueFactory<>("delay"));
+        destCol.setCellValueFactory(new PropertyValueFactory<>("destination"));
         Platform.runLater(() -> {
             try {
                 loadPeopleFromServer();

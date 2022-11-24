@@ -1,11 +1,12 @@
 package com.example.gondilaszlo_javafxrestclient;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Bus {
+    private int id;
     @Expose
-    private int ID;
-    @Expose
+    @SerializedName("bus")
     private String busID;
     @Expose
     private int delay;
@@ -13,18 +14,18 @@ public class Bus {
     private String destination;
 
     public Bus(int ID, String busID, int delay, String destination) {
-        this.ID = ID;
+        this.id = ID;
         this.busID = busID;
         this.delay = delay;
         this.destination = destination;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBusID() {
