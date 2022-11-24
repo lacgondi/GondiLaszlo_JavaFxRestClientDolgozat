@@ -3,11 +3,14 @@ package com.example.gondilaszlo_javafxrestclient;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import com.google.gson.Gson;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -54,6 +57,29 @@ public class BusController {
     }
 
     public void insertClick(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BusApplication.class.getResource("add-bus-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+            Stage stage = new Stage();
+            stage.setTitle("Create People");
+            stage.setScene(scene);
+            stage.show();
+            insertButton.setDisable(true);
+            updateButton.setDisable(true);
+            deleteButton.setDisable(true);
+            stage.setOnCloseRequest(event -> {
+                insertButton.setDisable(false);
+                updateButton.setDisable(false);
+                deleteButton.setDisable(false);
+                try {
+                    loadPeopleFromServer();
+                } catch (IOException e) {
+                    e.getMessage();
+                }
+            });
+        } catch (IOException e) {
+            e.getMessage();
+        }
     }
 
     public void updateClick(ActionEvent actionEvent) {
