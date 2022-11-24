@@ -17,6 +17,8 @@ public class HelloController {
     @FXML
     private TableView<Bus> busTable;
     @FXML
+    private TableColumn<Bus, String> idCol;
+    @FXML
     private TableColumn<Bus, String> busCol;
     @FXML
     private TableColumn<Bus, String> delayCol;
