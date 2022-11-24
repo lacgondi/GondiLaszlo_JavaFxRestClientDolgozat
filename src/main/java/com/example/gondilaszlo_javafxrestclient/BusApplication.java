@@ -14,7 +14,7 @@ public class BusApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(BusApplication.class.getResource("bus-list-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("Bus List");
         stage.setScene(scene);
         stage.show();
     }
