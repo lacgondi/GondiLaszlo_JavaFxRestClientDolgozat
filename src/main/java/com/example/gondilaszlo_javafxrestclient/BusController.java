@@ -61,7 +61,7 @@ public class BusController {
             FXMLLoader fxmlLoader = new FXMLLoader(BusApplication.class.getResource("add-bus-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 640, 480);
             Stage stage = new Stage();
-            stage.setTitle("Create People");
+            stage.setTitle("Add buses");
             stage.setScene(scene);
             stage.show();
             insertButton.setDisable(true);
