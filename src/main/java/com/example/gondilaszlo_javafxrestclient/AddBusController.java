@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 
 import java.io.IOException;
 
-public class AddBusController{
+public class AddBusController {
     @FXML
     private TextField busField;
     @FXML

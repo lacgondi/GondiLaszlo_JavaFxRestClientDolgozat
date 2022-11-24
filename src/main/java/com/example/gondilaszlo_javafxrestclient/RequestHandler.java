@@ -5,7 +5,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public final class RequestHandler {
-    private RequestHandler(){}
+    private RequestHandler() {
+    }
+
     public static Response get(String url) throws IOException {
         HttpURLConnection connection = setupConnection(url);
         connection.setRequestMethod("GET");

@@ -8,23 +8,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
-<VBox prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/null" fx:controller="com.example.gondilaszlo_javafxrestclient.BusController">
+<VBox prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/null" fx:controller="com.example.gondilaszlo_javafxrestclient.BusController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
     <children>
         <HBox spacing="20.0">
             <children>
-                <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertClick" text="Insert" />
-                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateClick" text="Update" />
-                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteClick" text="Delete" />
+                <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertClick" text="Insert"/>
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateClick" text="Update"/>
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteClick" text="Delete"/>
             </children>
         </HBox>
         <TableView fx:id="busTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
             <columns>
-                <TableColumn fx:id="busCol" minWidth="50.0" prefWidth="250.0" text="Bus License Plate" />
-                <TableColumn fx:id="delayCol" minWidth="50.0" prefWidth="250.0" text="Delay" />
-                <TableColumn fx:id="destCol" minWidth="50.0" prefWidth="75.0" text="Destination" />
+                <TableColumn fx:id="busCol" minWidth="50.0" prefWidth="250.0" text="Bus License Plate"/>
+                <TableColumn fx:id="delayCol" minWidth="50.0" prefWidth="250.0" text="Delay"/>
+                <TableColumn fx:id="destCol" minWidth="50.0" prefWidth="75.0" text="Destination"/>
             </columns>
         </TableView>
     </children>
