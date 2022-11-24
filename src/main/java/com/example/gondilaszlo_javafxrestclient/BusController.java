@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -12,7 +11,7 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 
-public class HelloController {
+public class BusController {
     @FXML
     private Button insertButton;
     @FXML
@@ -44,7 +43,7 @@ public class HelloController {
     }
 
     private void loadPeopleFromServer() throws IOException {
-        Response response = RequestHandler.get(HelloApplication.url);
+        Response response = RequestHandler.get(BusApplication.url);
         String content = response.getContent();
         Gson converter = new Gson();
         Bus[] buses = converter.fromJson(content, Bus[].class);
